@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration/Login </title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #eef;
+        }
+        .container{
+            margin: 10px;
+            padding: 20px;
+            width: 60%;
+            height: auto;
+            box-shadow: 0 0 7px #000;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: #fff;
+        }
+        .container > .LeftContainer .RightContainer{
+            margin: 0;
+            padding: 10px;
+        }
+        .container > .LeftContainer img{
+            width: 400px;
+            height: 400px;
+        }
+        .container > .RightContainer fieldset{
+            width: 400px;
+            height: 400px;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        .container > .RightContainer fieldset:active fieldset:hover{
+            box-shadow: 0 0 10px #000;
+        }
+        .container > .RightContainer fieldset legend{
+            text-transform: capitalize;
+            font-size: 30px;
+            font-weight: 900;
+            font-family: 'Agency FB';
+            background: #fff;
+        }
+        .container > .RightContainer fieldset > .fieldset-body{
+            height: auto;
+            width: auto;
+            display: grid;
+        }
+        .container > .RightContainer fieldset > .fieldset-body label{
+            font-family: Rockwell;
+            font-size: 24px;
+            text-transform: lowercase;
+            margin: 5px;
+
+        }
+        .container > .RightContainer fieldset > .fieldset-body input{
+            font-family: Rockwell;
+            font-size: 24px;
+            text-transform: lowercase;
+            margin: 5px;
+            padding: 20px;
+            border-radius: 15px;
+            border-color: #aeaeae;
+        }
+        .container > .RightContainer fieldset > .fieldset-body input:focus{
+            border-color: #a2efef;
+        }
+        .container >.RightContainer fieldset > .fieldset-footer{
+            width: auto;
+            height: auto;
+            padding: 15px 5px;
+            display: flex;
+            justify-content: space-between;
+            bottom: 0;
+            position: relative;
+        }
+        .container > .RightContainer fieldset > .fieldset-footer > input[type='submit'], input[type='reset']{
+            padding: 10px;
+            font-family: 'Agency FB';
+            border: 2px solid #eef;
+            width: 120px;
+            font-size: 24px;
+            border-radius: 25px;
+        }
+        .container > .RightContainer fieldset > .fieldset-footer > input[type='submit']{
+            background: #6161ce;
+        }
+        .container > .RightContainer fieldset > .fieldset-footer > input[type='reset']{
+            background: #db4c26;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="LeftContainer">
+            <img src="download.jpeg" alt="img">
+        </div>
+        <div class="RightContainer">
+            <form action="">
+                <fieldset>
+                    <legend title="User Login"> User Login</legend>
+                    <div class="fieldset-body">
+                        <label for="username" id="username">User Name</label>
+                        <input type="text" name="" id="" placeholder="User Name">
+                        <br>
+                        <label for="userpwd" id="userpwd">User Password</label>
+                        <input type="password" name="" id="" placeholder="User Password">
+                        <br>
+                    </div>
+                    <div class="fieldset-footer">
+                        <input type="submit" name="submit" id="" value="submit" onclick="">
+                        <input type="reset" name="reset" id="" value="Cancel" onclick="">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
