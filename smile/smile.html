@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smile Emoji</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            
+        }
+        .container{
+            padding: 0;
+            margin: 0;
+            width: auto;
+            display: flex;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+        .emoji{
+            margin: 0;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border: 2px solid black;
+            box-shadow: 0 0 5px blue;
+        }
+        .emoji span{
+            margin: 20px;
+            padding: 10px;
+            position: relative;
+        }
+        .emoji span img{
+            width: 50px;
+            height: 50px;
+            box-sizing: content-box;
+            box-shadow: 0 0 7px grey;
+            border-radius: 50%;
+            animation: myEmojiAnim 2s alternate infinite;
+            /* animation-play-state: paused; */
+        }
+        /* .emoji span img:hover{
+            animation: myEmojiAnim 1.5s alternate infinite;
+            animation-play-state: running;
+        } */
+
+        
+        @keyframes myEmojiAnim{
+            from{
+                transform: translate(0px, 0px);
+            }
+            to{
+                transform: translate(0px, -100px);
+                /* animation-play-state: paused; */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Emojis</h1>
+    <div class="container">
+        <div class="emoji">
+            <span><img src="emoji1.png" alt="emoji"></span>
+            <span><img src="emoji2.png" alt="emoji"></span>
+            <span><img src="emoji3.png" alt="emoji"></span>
+            <span><img src="emoji4.png" alt="emoji"></span>
+            <span><img src="emoji5.png" alt="emoji"></span>
+        </div>
+    </div>
+    <script>
+        let emoji = document.getElementsByClassName("emoji");
+
+        console.log(emoji);
+    </script>
+</body>
+</html>
