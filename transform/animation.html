@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball</title>
+    <style>
+       
+        .container{
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+           
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+        }
+        .ball{
+           
+            animation: bounce 1s ease-in-out 1s infinite  alternate; 
+        }
+        @keyframes bounce{
+            0%{
+                top: 40%;
+                left: 50%;
+            }
+           
+            100%{
+                top: 70%;
+            }
+        }
+        .box img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" >
+        <div class="box" id="jump" >
+            <img src="ball.png" alt="ball" >
+        </div>
+    </div>
+    <button onclick="on()"> Start </button>
+    <button onclick="off()"> Off </button> 
+
+    <script>
+        // function on(){
+        //     document.querySelector("box").classList.add('ball');
+        // }
+        // function off(){
+        //     document.querySelector("box").classList.remove('ball');
+        // }
+        // function start(){
+        //     on();
+        //     ball=setInterval(on,600);
+        // }
+        // function stop(){
+        //     clearInterval(ball);
+        //     document.querySelector("box").classList.remove('ball');
+        //     off();
+        // }
+
+        let d = document.getElementById("jump");
+        function on(){
+            d.classList.add('ball');
+        }
+        function off(){
+            d.classList.remove('ball');
+        }
+
+        
+    </script>
+</body>
+</html>
