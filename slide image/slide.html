@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slide</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 300px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #000;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ImgDiv{
+            padding: 0;
+            border: 1px solid red;
+            width: 400px;
+            height: 200px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .ImgDiv > img{
+            padding: 0;
+            width: 200px;
+            height: 200px;
+        }
+
+        .btnControls{
+            padding: 10px;
+            margin: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="ImgDiv" class="ImgDiv">
+            <img id="imgMain" src="/smile/emoji1.png" alt="emoji1">
+        </div>
+        <div id="btnControls" class="btnControls">
+            <button onclick="nextImage()">&lt;&lt; Previous</button>
+            <button onclick="prevImage()">Next &Gt;</button>
+        </div>
+    </div>
+
+    <script>
+        var c = 0;
+        var imgarr = ["/smile/emoji2.png", "/smile/emoji3.png", "/smile/emoji4.png", "/smile/emoji5.png"];
+
+        function nextImage(){
+            document.getElementById("imgMain").src = imgarr[c];
+            if(c===imgarr.length-1)
+            c = 0;
+            else
+            c++;
+        }
+
+        function prevImage(){
+            document.getElementById("imgMain").src = imgarr[c];
+            if (c === 0)
+            c = imgarr.length-1;
+            else
+            c--;
+        }
+    </script>
+</body>
+</html>
