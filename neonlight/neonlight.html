@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Light Text</title>
+   
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            font-family: 'Bauhaus 93';
+        }
+
+        .loader{
+            position: relative;
+        }
+
+        .loader > h1{
+            margin: 0;
+            padding: 0;
+            color: #222;
+            font-size: 8em;
+        }
+
+        .loader > h1 span{
+            display: table-cell;
+            margin: 0;
+            padding: 0;
+            animation: neontext 7s linear infinite ;
+
+        }
+        
+        .loader > h1 > .Light{
+            animation: light 7s linear infinite;
+        }
+
+
+        .loader > h1 span:nth-child(1){
+            animation-delay: 0s;
+        }
+        .loader > h1 span:nth-child(2){
+            animation-delay: 0.5s;
+        }
+        .loader > h1 span:nth-child(3){
+            animation-delay: 1.0s;
+        }
+        .loader > h1 span:nth-child(4){
+            animation-delay: 1.5s;
+        }
+        .loader > h1 span:nth-child(5){
+            animation-delay: 2.0s;
+        }
+        .loader > h1 span:nth-child(6){
+            animation-delay: 2.5s;
+        }
+        .loader > h1 span:nth-child(7){
+            animation-delay: 3.0s;
+        }
+        .loader > h1 span:nth-child(8){
+            animation-delay: 3.5s;
+        }
+        .loader > h1 span:nth-child(9){
+            animation-delay: 4.0s;
+        }
+        .loader > h1 span:nth-child(10){
+            animation-delay: 4.5s;
+        }
+        .loader > h1 span:nth-child(11){
+            animation-delay: 5.0s;
+        }
+        .loader > h1 span:nth-child(12){
+            animation-delay: 5.5s;
+        }
+        .loader > h1 span:nth-child(13){
+            animation-delay: 6.0s;
+        }
+        .loader > h1 span:nth-child(14){
+            animation-delay: 6.5s;
+        }
+        .loader > h1 span:nth-child(15){
+            animation-delay: 7.0s;
+        }
+
+        @keyframes neontext {
+            0%,100%{
+                color: #fff;
+                filter: blur(2);
+                text-shadow: 0 0 5px #003bff, 0 0 10px #003bff, 0 0 20px #003bff, 0 0 40px #003bff, 0 0 80px #003bff, 0 0 120px #003bff, 0 0 200px #003bff, 0 0 300px #003bff, 0 0 400px #003bff, 0 0 250px #ff00ff, 0 0 350px #ff00ff, 0 0 650px #ff00ff;
+
+               
+            }
+
+            5%, 95%{
+                color: #222;
+                filter: blur(2);
+                text-shadow: none;
+            }
+        }
+
+        @keyframes light {
+            0%, 100%{
+                color: #fff;
+                filter: blur(2);
+                text-shadow: 0 0 5px #ffacfc, 0 0 10px #ffacfc, 0 0 20px #ffacfc, 0 0 40px #f148fb, 0 0 80px #f148fb, 0 0 120px #f148fb, 0 0 200px #7122fa, 0 0 300px #7122fa, 0 0 400px #7122fa, 0 0 250px #560a86, 0 0 350px #560a86, 0 0 650px #560a86;
+            }
+
+            5%, 95%{
+                color: #222;
+                filter: blur(2);
+                text-shadow: none;
+            }
+            
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <h1>
+            <span>N</span>
+            <span>E</span>
+            <span>O</span>
+            <span>N</span>
+            <span>&nbsp;</span>
+            <span class="Light">L</span>
+            <span class="Light">I</span>
+            <span class="Light">G</span>
+            <span class="Light">H</span>
+            <span class="Light">T</span>
+            <span>&nbsp;</span>
+            <span class="text">T</span>
+            <span class="text">E</span>
+            <span class="text">X</span>
+            <span class="text">T</span>
+        </h1>
+    </div>
+</body>
+</html>
