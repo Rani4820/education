@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="wood.jpg" type="image/x-icon">
+    <title>Jumping Text</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #000;
+            min-height: 100vh;
+        }
+
+        .loader{
+            position: relative;
+        }
+
+        .loader > span{
+            font-size: 2rem;
+            color: white;
+            font-family: 'Consolas';
+            text-shadow: 0 0 5px #ccc, 3px 3px 15px #fff;
+            text-transform: uppercase;
+            display: inline-block;
+            animation: jumptext 2s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--V));
+        }
+
+        @keyframes jumptext {
+            0%, 40%, 100% {
+                transform: translateY(0);
+                transform: scale(.5, .5);
+            }
+            20%{
+                transform: translateY(-50px);
+                transform: scale(1.5, 1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <span style="--V:1;">J</span>
+        <span style="--V:2;">U</span>
+        <span style="--V:3;">M</span>
+        <span style="--V:4;">P</span>
+        <span style="--V:5;">I</span>
+        <span style="--V:6;">N</span>
+        <span style="--V:7;">G</span>
+        <span style="--V:8;">&nbsp;</span>
+        <span style="--V:9;">T</span>
+        <span style="--V:10;">E</span>
+        <span style="--V:11;">X</span>
+        <span style="--V:12;">T</span>
+    </div>
+</body>
+</html>
